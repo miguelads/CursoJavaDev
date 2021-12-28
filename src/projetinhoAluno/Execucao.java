@@ -1,4 +1,6 @@
 package projetinhoAluno;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JOptionPane;
 
@@ -40,6 +42,9 @@ public class Execucao {
 		
 		// Fazendo de forma mais dinamica...
 		
+	   List<Aluno> alunos = new ArrayList<Aluno>();// criando lista de alunos
+		
+		for(int i = 1; i <= 2; i++) {
 		String nome = JOptionPane.showInputDialog("Nome do Aluno");
 		String cpf = JOptionPane.showInputDialog("CPF do Aluno");
 		String instituicao = JOptionPane.showInputDialog("Instituição do Aluno");
@@ -78,13 +83,20 @@ public class Execucao {
 			  pos++; // este incremento serve para tirar um erro de excluir o 2 e depois o 4 e não da erro de posição
 			  continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a Remover");
 			  System.out.println(aluno.toString());
-		  }
+		   }
+		  
+		    }
+		       alunos.add(aluno);
 		}
 		
-		System.out.println(aluno.toString());
-		System.out.println("A média do aluno é " + aluno.calculoMedia());
-		System.out.println("O aluno está " + (aluno.resultadoAluno() ? " aprovado " : " reprovado "));
-		System.out.println("Sua idade é " + aluno.calcularIdade());
-	}
+		 for(Aluno aluno : alunos) {
+			 System.out.println(aluno.toString());
+			 System.out.println("A média do aluno é " + aluno.calculoMedia());
+			 System.out.println("O aluno está " + (aluno.resultadoAluno() ? " aprovado " : " reprovado "));
+			 System.out.println("Sua idade é " + aluno.calcularIdade()); 
+			 
+		 }
+		
+}
 
 }
