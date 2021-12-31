@@ -1,5 +1,6 @@
 package projetoAlunoSemComentario;
 
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,18 +76,27 @@ public class Aluno {
 
 	public double calcularMedia() {
 		double media = 0;
-		for(Disciplina disciplina : disciplinas){
+		for (Disciplina disciplina : disciplinas) {
 			media += disciplina.getNota();
 		}
 		return media / disciplinas.size();
 	}
 
-	public boolean statusAluno() {
-		return true;
+	public String statusAluno() {
+		if (calcularMedia() >= 5) {
+			if (calcularMedia() >= 5 && calcularMedia() <= 6) {
+				return "aluno em recuperação";
+			} else {
+				return "aluno aprovado";
+			}
+		} else {
+			return "Aluno reprovado";
+		}
 	}
 
 	public int idadeAluno() {
-		return 0;
+		int anoAtual = Year.now().getValue();
+		return anoAtual - anoNascimento;
 	}
 
 }

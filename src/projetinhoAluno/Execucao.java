@@ -88,14 +88,47 @@ public class Execucao {
 		    }
 		       alunos.add(aluno);
 		}
-		
+		/*
 		 for(Aluno aluno : alunos) {
-			 System.out.println(aluno.toString());
-			 System.out.println("A média do aluno é " + aluno.calculoMedia());
-			 System.out.println("O aluno está " + (aluno.resultadoAluno() ? " aprovado " : " reprovado "));
-			 System.out.println("Sua idade é " + aluno.calcularIdade()); 
-			 
+			 // procurando o um aluno na lista, encontrando para o loop e exibe o aluno encontrado
+			 if(aluno.getNome().equalsIgnoreCase("Miguel")) {
+				 System.out.println(aluno.toString());
+				 System.out.println("A média do aluno é " + aluno.calculoMedia());
+				 System.out.println("O aluno está " + (aluno.resultadoAluno() ? " aprovado " : " reprovado "));
+				 System.out.println("Sua idade é " + aluno.calcularIdade()); 
+				 break;
+			 }			 
+		 }*/
+		// encontrando um aluno e removendo ele da lista.
+		for(Aluno aluno : alunos) {
+			 if(aluno.getNome().equalsIgnoreCase("Miguel")) {
+				 alunos.remove(aluno);
+				 break;
+			 }else {
+				 System.out.println(aluno.toString());
+				 System.out.println("A média do aluno é " + aluno.calculoMedia());
+				 System.out.println("O aluno está " + (aluno.resultadoAluno() ? " aprovado " : " reprovado "));
+				 System.out.println("Sua idade é " + aluno.calcularIdade()); 
+			 }			 
 		 }
+		// um for dentro do outro so para nivel de pratica.
+		for(Aluno aluno: alunos) {
+			System.out.println("Alunos que sobraram na lista");
+			System.out.println("Aluno : " + aluno.getNome());
+			System.out.println("Suas materias são");
+			for(Disciplina dis : aluno.getDisciplinas()) {
+				System.out.println(dis.getDisciplina());
+			}
+		}
+		
+		// percorrendo a lista por posição
+		for(int pos = 0; pos < alunos.size(); pos++) {
+			Aluno aluno = alunos.get(pos);
+			System.out.println("Nome " + aluno.getNome());
+			System.out.println("Média do aluno " + aluno.calculoMedia());
+			System.out.println("Resultado " + aluno.resultadoAluno());
+		}
+		
 		
 }
 
