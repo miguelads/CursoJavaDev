@@ -4,6 +4,9 @@ import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 
+import classesEatributosStaticos.StatusAluno;
+import operacoesLogicas.ProgramaCalcularMedia;
+
 public class Aluno {
 	private String nome;
 	private String cpf;
@@ -120,6 +123,19 @@ public class Aluno {
 		int ano = Year.now().getValue(); // metodo para pegar o ano atual
 		int resultado = ano - anoNascimento;
 		return resultado;
+	}
+	
+	public String statusAluno() {
+		if(calculoMedia() >= 5) {
+			if(calculoMedia() >= 5 && calculoMedia() <= 6) {
+				return StatusAluno.RECUPERACAO;
+			}else {
+				return StatusAluno.APROVADO;
+			}
+			
+		}else {
+			return StatusAluno.REPROVADO;
+		}
 	}
 	
 	

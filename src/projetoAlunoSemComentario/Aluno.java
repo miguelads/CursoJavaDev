@@ -4,6 +4,8 @@ import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 
+import classesEatributosStaticos.StatusAluno;
+
 public class Aluno {
 
 	private String nomeAluno;
@@ -85,12 +87,12 @@ public class Aluno {
 	public String statusAluno() {
 		if (calcularMedia() >= 5) {
 			if (calcularMedia() >= 5 && calcularMedia() <= 6) {
-				return "aluno em recuperação";
+				return StatusAluno.RECUPERACAO;
 			} else {
-				return "aluno aprovado";
+				return StatusAluno.APROVADO;
 			}
 		} else {
-			return "Aluno reprovado";
+			return StatusAluno.REPROVADO;
 		}
 	}
 
