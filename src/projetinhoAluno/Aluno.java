@@ -4,8 +4,7 @@ import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 
-import classesEatributosStaticos.StatusAluno;
-import operacoesLogicas.ProgramaCalcularMedia;
+import modulo_08_OperacoesLogicasCondicionaisRelacionais.ProgramaCalcularMedia;
 
 public class Aluno {
 	private String nome;
@@ -136,9 +135,13 @@ public class Aluno {
 		}else {
 			return StatusAluno.REPROVADO;
 		}
+		
 	}
-	
-	
+	// este metodo tb é valido, porem so se precisar fazer varias validações ai precisa 
+	// fazer desta forma
+	public void addDisciplina(Disciplina disciplina) {
+		this.disciplinas.add(disciplina);
+	}
 	
 	
 }

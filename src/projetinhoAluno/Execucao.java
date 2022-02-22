@@ -4,9 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.swing.JOptionPane;
-
-import classesEatributosStaticos.StatusAluno;
-
 public class Execucao {
 
 	public static void main(String[] args) {
