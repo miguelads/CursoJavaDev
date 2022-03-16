@@ -1,4 +1,4 @@
-package classesAtributosStaticos_modulo_09;
+package modulo_09_classesAtributosStaticos;
 
 public class Aluno {
 	private String nome;

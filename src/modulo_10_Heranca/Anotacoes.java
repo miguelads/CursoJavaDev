@@ -56,7 +56,7 @@ public class Anotacoes {
 	 *  
 	 *  na interface: só tera acesso aos metodos as classes que implementarem a interface 
 	 *  assim eu posso ter 3 ou mais classes filhas e escolher uma que implemente um metodo que eu não
-	 *  quero que as outras implementem usando a interface e assinando o contrato com ela.
+	 *  quero que as outras não implementem, usando a interface e assinando o contrato com ela.
 	 *  
 	 *  
 	 *  

@@ -1,4 +1,4 @@
-package classesAtributosStaticos_modulo_09;
+package modulo_09_classesAtributosStaticos;
 
 public class Status {
 	public static String APROVADO = "aprovado";
